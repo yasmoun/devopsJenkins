@@ -8,4 +8,4 @@ def client():
 
 def test_hello(client):
     rv = client.get('/')
-    assert rv.data == "Bienvenue à l'API de gestion des tâches!"
+    assert rv.data.decode('utf-8') == "Bienvenue à l'API de gestion des tâches!"
