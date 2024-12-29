@@ -9,12 +9,12 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh 'docker build -t task-api .'
+                sh 'docker build -t flask-task-api .'
             }
         }
         stage('Test') {
             steps {
-                sh 'docker run task-api pytest'
+                sh 'docker run flask-task-api pytest'
             }
         }
         stage('Archive Results') {
