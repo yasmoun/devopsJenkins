@@ -4,7 +4,8 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                git 'https://github.com/yasmoun/task-api'
+                git branch: 'main',
+                    url: 'https://github.com/yasmoun/task-api'
             }
         }
         stage('Build') {
